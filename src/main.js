@@ -1,9 +1,9 @@
+require('dotenv').config();
 const EXPRESS = require('express');
 const APP = EXPRESS();
 const CORS = require('cors');
 const DB = require('./db/models');
 const { configureApp } = require('./app');
-require('dotenv').config();
 const swaggerUi = require('swagger-ui-express');
 const swaggerFile = require('../swagger-output.json'); // generado por swagger-autogen
 

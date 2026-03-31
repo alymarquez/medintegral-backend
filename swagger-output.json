@@ -883,6 +883,66 @@
         }
       }
     },
+    "/api/afiliados/{id}/fecha-baja": {
+      "put": {
+        "tags": [
+          "Afiliados"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Fecha de Baja del Afiliado",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AfiliadoFechaBajaUpdateInput"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/afiliados/{id}/reincorporar": {
+      "put": {
+        "tags": [
+          "Afiliados"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "Reincorporar al Afiliado",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AfiliadoReincorporarUpdateInput"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/afiliados/{id}/datos-personales": {
       "put": {
         "tags": [
@@ -1666,6 +1726,24 @@
               }
             }
           }
+        }
+      }
+    },
+    "AfiliadoFechaBajaUpdateInput": {
+      "type": "object",
+      "properties": {
+        "fechaBaja": {
+          "type": "string",
+          "example": "2024-06-30"
+        }
+      }
+    },
+    "AfiliadoReincorporarUpdateInput": {
+      "type": "object",
+      "properties": {
+        "reincorporarGrupoFamiliar": {
+          "type": "boolean",
+          "example": false
         }
       }
     },

@@ -7,7 +7,7 @@
     "start": "node main.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "db": "node src/reiniciarDB.js && npx sequelize-cli db:seed:all",
-    "gendoc": "rm -f swagger-output.json && node swagger.js",
+    "gendoc": "node swagger.js",
     "start:doc": "npm run gendoc && npm run start"
   },
   "keywords": [],
